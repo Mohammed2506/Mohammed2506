@@ -1,4 +1,4 @@
-#include "spinlock.h"
+#include "lock.h"
 void SpinlockEnter ( int *addr ) {
 	while(!__sync_bool_compare_and_swap(addr,0,1));
 }
